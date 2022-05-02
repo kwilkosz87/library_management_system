@@ -5,10 +5,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!----------------HEADER-------------------->
 	<title>Media</title>
 	<link rel="stylesheet" type = "text/css" href = "style.css">
 	<meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial-scale = 1">
+	<!----------------TABLE STYLING-------------------->
 	<style>
 		table {
 		border-collapse: collapse;
@@ -58,13 +60,13 @@
 	</div>
 
 	<?php
-		if(isset($_POST['submit']))
+		if(isset($_POST['submit']))//Submit button has been pressed
 		{
-			if(isset($_SESSION['login_user']))
+			if(isset($_SESSION['login_user']))//User is logged in
 			{
 				mysqli_query($conn, "INSERT INTO media VALUES (NULL,'$_POST[name]','$_POST[authors]',
 									 '$_POST[edition]','$_POST[availability]','$_POST[quantity]','$_POST[category]');");
-				?>
+				?><!----------------INSERTING NEW MEDIA-------------------->
 				<script type = "text/javascript">
 				alert ("Media has been added successfully!");
 				</script>
