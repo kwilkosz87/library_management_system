@@ -1,1 +1,4 @@
-
+#Data Collection
+Data collection in this application is all done through the interaction of the files in the system. There are no files that need to be run separately in
+order to collect the data. This is all stored in phpMyAdmin which runs SQL to maintain the database. With the integration built into the system the
+database is organically storing the data.
