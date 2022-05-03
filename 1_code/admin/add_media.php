@@ -64,6 +64,11 @@
 		{
 			if(isset($_SESSION['login_user']))//User is logged in
 			{
+				
+				/*PSEUDO CODE to test inserting media
+				mysqli_query($conn, "INSERT INTO media VALUES (NULL,'some_name','Some_authors',
+									 'some_edition','some_availability','some_quantity','some_category');");
+				*/
 				mysqli_query($conn, "INSERT INTO media VALUES (NULL,'$_POST[name]','$_POST[authors]',
 									 '$_POST[edition]','$_POST[availability]','$_POST[quantity]','$_POST[category]');");
 				?><!----------------INSERTING NEW MEDIA-------------------->
